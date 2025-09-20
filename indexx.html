@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>loan-calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="head">
+        <h1>smart loan calculator</h1>
+        <p class="subtitle">
+          calculate your monthly payments and total interest easily
+        </p>
+      </div>
+   
+
+    <div class="calculator-body">
+      <div class="input-section">
+        <!-- input section 1 -->
+        <div class="input-group">
+          <label for="amount">Loan Amount ($):</label>
+          <input type="number" id="amount" placeholder="e.g., 250000" />
+          <span class="input-icon">$</span>
+        </div>
+
+        <!-- input section 2 -->
+        <div class="input-group">
+          <label for="interest">annual interest rate (%):</label>
+          <input type="number" id="interest" placeholder="e.g., 5.5" />
+          <span class="input-icon">%</span>
+        </div>
+
+        <!-- input section 3 -->
+        <div class="input-group">
+          <label for="loan">loan term (years):</label>
+          <input type="number" id="loan" placeholder="e.g., 30" />
+          <span class="input-icon">Yrs</span>
+        </div>
+
+        <!-- calculator button -->
+        <button id="calculateBtn">
+          calculate loan <span class="button-icon">-></span>
+        </button>
+      </div>
+
+      <!-- loan summary -->
+      <div class="results" id="results">
+        <h3>Loan Summary</h3>
+
+        <!-- result section 1 -->
+        <div class="result-item">
+          <span class="result-label">Monthly Payment</span>
+          <span class="result-value" id="monthly">$0.00</span>
+        </div>
+
+        <!-- result section 2 -->
+        <div class="result-item">
+          <span class="result-label">Total Payment</span>
+          <span class="result-value" id="total">$0.00</span>
+        </div>
+
+        <!-- result section 3 -->
+        <div class="result-item">
+          <span class="result-label">Total interest</span>
+          <span class="result-value" id="totalInterest">$0.00</span>
+        </div>
+
+        <!-- end of results section -->
+      </div>
+    </div>
+    </div>
+
+    <!-- load js -->
+    <script src="script.js"></script>
+  </body>
+</html>

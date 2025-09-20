@@ -1,0 +1,168 @@
+/* ========== Global Reset & Base ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #e3f2fd);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 20px;
+  color: #333;
+}
+
+/* ========== Container / Card ========== */
+.calculator-body {
+  background: #fff;
+  padding: 24px 32px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+/* ========== Header ========== */
+.head {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.head h1 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #666;
+}
+
+.wrapper {
+  max-width: 600px;
+  margin: 0 auto; /* center horizontally */
+}
+
+/* ========== Input Section ========== */
+.input-section {
+  margin-bottom: 24px;
+}
+
+.input-group {
+  margin-bottom: 16px;
+  position: relative;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #444;
+}
+
+input {
+  width: 100%;
+  padding: 12px 40px 12px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+input:focus {
+  border-color: #3f51b5;
+  box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.2);
+}
+
+/* Input icon inside the field */
+.input-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+/* ========== Button ========== */
+#calculateBtn {
+  width: 100%;
+  padding: 14px;
+  background: #3f51b5;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+#calculateBtn:hover {
+  background: #303f9f;
+  transform: translateY(-2px);
+}
+
+#calculateBtn:active {
+  transform: translateY(0);
+}
+
+/* ========== Results Section ========== */
+.results {
+  margin-top: 24px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.results h3 {
+  margin-bottom: 16px;
+  font-size: 20px;
+  color: #2c3e50;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.result-item:last-child {
+  border-bottom: none;
+}
+
+.result-label {
+  font-size: 14px;
+  color: #555;
+}
+
+.result-value {
+  font-weight: bold;
+  font-size: 16px;
+  color: #3f51b5;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 600px) {
+  .calculator-body {
+    padding: 20px;
+  }
+
+  .head h1 {
+    font-size: 22px;
+  }
+
+  input,
+  #calculateBtn {
+    font-size: 14px;
+  }
+}
